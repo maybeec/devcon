@@ -63,7 +63,7 @@ public class CommandImpl extends BaseCmdImpl {
     if (annotation != null) {
       Parameters params = (Parameters) annotation;
 
-      List<Parameter> paramsList = Arrays.asList(params.values());
+      List<Parameter> paramsList = Arrays.asList(params.value());
 
       for (Parameter param : paramsList) {
         CommandParameter cmdParam =

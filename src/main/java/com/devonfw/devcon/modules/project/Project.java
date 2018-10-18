@@ -85,7 +85,7 @@ public class Project extends AbstractCommandModule {
   }
 
   @Command(name = "create", description = "This command creates a new combined server & client project")
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "combinedprojectpath", description = "where to create the combined server and client project (currentDir if not given)", optional = true, inputType = @InputType(name = InputTypeNames.PATH)),
   @Parameter(name = "servername", description = "name for the server project"),
   @Parameter(name = "packagename", description = "package name for the server project"),
@@ -142,7 +142,7 @@ public class Project extends AbstractCommandModule {
    * @param serverpath Path of server directory
    */
   @Command(name = "run", description = "This command runs the server & client project (unified server and client build) in debug mode. It runs client app and spring boot server seperately.", context = ContextType.COMBINEDPROJECT)
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "clientpath", description = "Location of the oasp4js app", optional = true, inputType = @InputType(name = InputTypeNames.PATH)),
   @Parameter(name = "serverport", description = "Port to start server", optional = true),
   @Parameter(name = "serverpath", description = "Path to Server project Workspace (currentDir if not given)", optional = true, inputType = @InputType(name = InputTypeNames.PATH)) })

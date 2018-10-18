@@ -57,7 +57,7 @@ public class Workspace extends AbstractCommandModule {
    * @throws Exception Exception thrown by workspace create command
    */
   @Command(name = "create", description = "This command creates a new workspace with all default configuration in a Devonfw distribution.")
-  @Parameters(values = { @Parameter(name = "workspace", description = "This is the name of workspace to create"),
+  @Parameters(value = { @Parameter(name = "workspace", description = "This is the name of workspace to create"),
   @Parameter(name = "distribution", description = "This is the location of the devon distribution (default: from current dir)", optional = true, inputType = @InputType(name = InputTypeNames.PATH)) })
   public void create(String workspace, String distribution) throws Exception {
 

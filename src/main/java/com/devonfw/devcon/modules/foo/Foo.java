@@ -57,7 +57,7 @@ public class Foo extends AbstractCommandModule {
   }
 
   @Command(name = "customFarewell", description = "This command is used to say a custom farewell")
-  @Parameters(values = { @Parameter(name = "name", description = "this is the description for name parameter") })
+  @Parameters(value = { @Parameter(name = "name", description = "this is the description for name parameter") })
   @SuppressWarnings("javadoc")
   public void customFarewell(String name) {
 
@@ -65,7 +65,7 @@ public class Foo extends AbstractCommandModule {
   }
 
   @Command(name = "largeCustomFarewell", description = "This command is used to say a large custom bye")
-  @Parameters(values = { @Parameter(name = "name", description = "this is the name parameter"),
+  @Parameters(value = { @Parameter(name = "name", description = "this is the name parameter"),
   @Parameter(name = "surname", description = "this is the description for the surname parameter") })
   @SuppressWarnings("javadoc")
   public void largeCustomFarewell(String name, String surname) {
@@ -74,7 +74,7 @@ public class Foo extends AbstractCommandModule {
   }
 
   @Command(name = "saySomething", description = "This command is for say something", context = ContextType.PROJECT)
-  @Parameters(values = { @Parameter(name = "message", description = "the message to be written"),
+  @Parameters(value = { @Parameter(name = "message", description = "the message to be written"),
   @Parameter(name = "signature", description = "the signature", optional = true) })
   @SuppressWarnings("javadoc")
   public void saySomething(String message, String signature) {
@@ -83,7 +83,7 @@ public class Foo extends AbstractCommandModule {
   }
 
   @Command(name = "multipleWords", description = "This command is to say multiple words", context = ContextType.PROJECT)
-  @Parameters(values = { @Parameter(name = "first", description = "the first word", optional = true),
+  @Parameters(value = { @Parameter(name = "first", description = "the first word", optional = true),
   @Parameter(name = "second", description = "the second word", optional = true),
   @Parameter(name = "third", description = "the third word", optional = true),
   @Parameter(name = "fourth", description = "the fourth word", optional = true) })
@@ -99,7 +99,7 @@ public class Foo extends AbstractCommandModule {
   }
 
   @Command(name = "multipleWordsNoContext", description = "This command is to say multiple words (without context)")
-  @Parameters(values = { @Parameter(name = "first", description = "the first word", optional = true),
+  @Parameters(value = { @Parameter(name = "first", description = "the first word", optional = true),
   @Parameter(name = "second", description = "the second word", optional = true),
   @Parameter(name = "third", description = "the third word", optional = true),
   @Parameter(name = "FOURTH", description = "the fourth word", optional = true) })
@@ -111,7 +111,7 @@ public class Foo extends AbstractCommandModule {
   }
 
   @Command(name = "delegateCommand", description = "This command is to delegate to another")
-  @Parameters(values = { @Parameter(name = "first", description = "the first word", optional = true),
+  @Parameters(value = { @Parameter(name = "first", description = "the first word", optional = true),
   @Parameter(name = "second", description = "the second word", optional = true),
   @Parameter(name = "third", description = "the third word", optional = true),
   @Parameter(name = "FOURTH", description = "the fourth word", optional = true) })

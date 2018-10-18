@@ -56,7 +56,7 @@ public class Dist extends AbstractCommandModule {
    * @throws Exception
    */
   @Command(name = "install", description = "This command downloads the last version of a distribution from Teamforge. You can select between Devonfw distribution (by default) and Oasp-ide distribution.", context = ContextType.NONE)
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "path", description = "a location for the Devon distribution download", optional = true, inputType = @InputType(name = InputTypeNames.PATH)),
   @Parameter(name = "type", description = "the type of the distribution, the options are: \n 'oaspide' to download OASP IDE\n 'devondist' to download Devon IP IDE", optional = true, inputType = @InputType(name = InputTypeNames.LIST, values = {
   "devondist"/* ,"oaspide" */ }))/*
@@ -125,7 +125,7 @@ public class Dist extends AbstractCommandModule {
    * @throws Exception
    */
   @Command(name = "init", description = "This command initializes a newly downloaded distribution", context = ContextType.NONE)
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "path", description = "location of the Devon distribution (current dir if not given)", optional = true, inputType = @InputType(name = InputTypeNames.PATH)) })
   public void init(String path) throws Exception {
 
@@ -180,7 +180,7 @@ public class Dist extends AbstractCommandModule {
    * @param svnpass the password of the user with permissions in the svn repository
    */
   @Command(name = "s2", description = "This command initializes a Devonfw distribution configuring it for Shared Services use.")
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "projectname", description = "the name for the new project", inputType = @InputType(name = InputTypeNames.GENERIC)),
   @Parameter(name = "user", description = "the userId for Artifactory provided by S2 for the project", inputType = @InputType(name = InputTypeNames.GENERIC)),
   @Parameter(name = "pass", description = "the password for Artifactory", inputType = @InputType(name = InputTypeNames.PASSWORD)),
@@ -245,7 +245,7 @@ public class Dist extends AbstractCommandModule {
    *
    */
   @Command(name = "info", description = "Basic info about the distribution")
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "path", description = "a location for the Devon distribution download", optional = true, inputType = @InputType(name = InputTypeNames.PATH)) })
   public void info(String path) {
 

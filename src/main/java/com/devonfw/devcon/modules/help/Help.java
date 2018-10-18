@@ -59,7 +59,7 @@ public class Help extends AbstractCommandModule {
 
   @SuppressWarnings("javadoc")
   @Command(name = "module", description = "Shows commands available in a module")
-  @Parameters(values = { @Parameter(name = "name", description = "the module name to get help for") })
+  @Parameters(value = { @Parameter(name = "name", description = "the module name to get help for") })
   public void module(String name) {
 
     Optional<CommandModuleInfo> module = this.registry.getCommandModule(name);
@@ -74,7 +74,7 @@ public class Help extends AbstractCommandModule {
 
   @SuppressWarnings("javadoc")
   @Command(name = "command", description = "Shows commands available in a module")
-  @Parameters(values = { @Parameter(name = "module", description = "the module to look up the coomand"),
+  @Parameters(value = { @Parameter(name = "module", description = "the module to look up the coomand"),
   @Parameter(name = "command", description = "the comand name to get help for") })
   public void module(String moduleName, String commandName) {
 

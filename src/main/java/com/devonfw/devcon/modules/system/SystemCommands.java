@@ -77,7 +77,7 @@ public class SystemCommands extends AbstractCommandModule {
 
   @SuppressWarnings("javadoc")
   @Command(name = "installDevcon", description = "Install Devcon on user´s HOME folder or alternative path", proxyParams = true)
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "addToPath", description = "Add to %PATH% (by default \"true\")", optional = true, inputType = @InputType(name = InputTypeNames.LIST, values = {
   "true", "false" })) })
   public void install(String addToPath/* , String proxyHost, String proxyPort */) {
@@ -174,7 +174,7 @@ public class SystemCommands extends AbstractCommandModule {
 
   @SuppressWarnings("javadoc")
   @Command(name = "configureEnvironment", description = "Update Devcon as installed on user´s system", proxyParams = true)
-  @Parameters(values = {})
+  @Parameters(value = {})
   public void update() {
 
     Output out = getOutput();

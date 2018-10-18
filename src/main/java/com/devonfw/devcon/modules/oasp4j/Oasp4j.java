@@ -81,7 +81,7 @@ public class Oasp4j extends AbstractCommandModule {
    * @throws Exception
    */
   @Command(name = "create", description = "This creates a new server project based on OASP template")
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "serverpath", description = "where to create", optional = true, inputType = @InputType(name = InputTypeNames.PATH)),
   @Parameter(name = "servername", description = "Name of project"),
   @Parameter(name = "packagename", description = "package name in server project"),
@@ -172,7 +172,7 @@ public class Oasp4j extends AbstractCommandModule {
    * @param port Server will be started at this port
    */
   @Command(name = "run", description = "This command runs the application from spring boot embedded tomcat", context = ContextType.PROJECT)
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "port", description = "Port to start Spring boot app (port 8081 by default)", optional = true) })
   public void run(String port) {
 
@@ -254,7 +254,7 @@ public class Oasp4j extends AbstractCommandModule {
    * @param path server project path
    */
   @Command(name = "deploy", description = "This command will deploy the server project on tomcat", context = ContextType.PROJECT)
-  @Parameters(values = {
+  @Parameters(value = {
   @Parameter(name = "tomcatpath", description = "Path to tomcat folder (if not provided and the project is in a Devonfw distribution the default software/tomcat folder will be used)", optional = true, inputType = @InputType(name = InputTypeNames.PATH)) })
   public void deploy(String tomcatpath) {
 

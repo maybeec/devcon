@@ -53,7 +53,7 @@ public class Oasp4js extends AbstractCommandModule {
   private static String NG_SERVE = " ng serve --progress false";
 
   @Command(name = "create", description = "This command creates a basic Oasp4js app")
-  @Parameters(values = { @Parameter(name = "clientname", description = "The name for the project"),
+  @Parameters(value = { @Parameter(name = "clientname", description = "The name for the project"),
   @Parameter(name = "clientpath", description = "The location for the new project", optional = true, inputType = @InputType(name = InputTypeNames.PATH)) })
   public void create(String clientname, String clientpath) {
 
